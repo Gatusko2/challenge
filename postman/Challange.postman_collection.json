@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "1d8322de-5137-46e4-b06f-29088a6db9c9",
+		"name": "Challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3833779"
+	},
+	"item": [
+		{
+			"name": "Get Possible Address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVtby11c2VybmFtZTpkZW1vLXBhc3N3b3Jk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Working ApiKey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bGl2ZV9wdWJfYTE1OTUzZDZiODZjNzAyOGNiZjc2MDVlZDM2MGVlZTo=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"test\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.lob.com/v1/us_autocompletions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"lob",
+						"com"
+					],
+					"path": [
+						"v1",
+						"us_autocompletions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
